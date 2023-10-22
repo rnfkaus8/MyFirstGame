@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float moveSpeed = 3f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+        if (transform.position.y < -11.5) {
+            transform.position += new Vector3(0, 22.5f, 0);
+        }
+
     }
 }
