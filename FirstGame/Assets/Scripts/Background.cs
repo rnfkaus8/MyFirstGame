@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private float moveSpeed = 3f;
-    private float positionYLength = 11.5f;
+    private const float MoveSpeed = 3f;
+
+    private const float PositionYLength = 11.5f;
+
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+        transform.position += Vector3.down * (MoveSpeed * Time.deltaTime);
         
-        if (transform.position.y < -positionYLength) {
-            transform.position += new Vector3(0, positionYLength * 2f, 0);
+        if (transform.position.y < -PositionYLength) {
+            transform.position += new Vector3(0, PositionYLength * 2f, 0);
         }
 
     }
