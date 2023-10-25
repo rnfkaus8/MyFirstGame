@@ -12,7 +12,7 @@ public class NewBehaviourScript : MonoBehaviour
         transform.position += Vector3.down * moveSpeed * Time.deltaTime;
         
         if (transform.position.y < -positionYLength) {
-            transform.position += new Vector3(0, positionYLength * 2.0, 0);
+            transform.position += new Vector3(0, positionYLength * 2f, 0);
         }
 
     }
